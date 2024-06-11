@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11//DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+   <title>Amazon Linux server</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      /*<![CDATA[*/
+      body{
+         padding-top: 80px;
+         background-image: url(./background2.jpg);
+      }
+     .menu{
+      width: 500px;
+      height: 1000px;
+      background-color: blue;
+     }
+     .container{
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 auto;
+     }
+     nav{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: gray;
+     }
+     .row{
+      height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     }
+     .col{
+      width: 200px;
+      color: aliceblue;
+     }
+     .end{
+      display: flex;
+      justify-content: end;
+     }
+     .col-5{
+       flex: 1;
+       display: flex;
+     }
+     .col-5 input{
+       width: 1px;
+       flex: 1;
+       padding: .5rem 1rem;
+       outline: none;
+       border-top-left-radius: 20px;
+       border-end-start-radius: 20px;
+     }
+     .col-5 button{
+       outline: none;
+       border: none;
+       background: darkblue;
+       color: aliceblue;
+       margin-right: 20px;
+       margin-left: -5px;
+       width: 100px;
+       padding: .6rem;
+       border-top-right-radius: 20px;
+       border-end-end-radius: 20px;
+     }
+     .col img{
+       height: 40px;
+       width: 40px;
+       border-radius: 50%;
+     }
+     .py-5{
+       padding: 3rem 0;
+     }
+     .mt-5{
+        margin-top: 3rem;
+     }
+      /*]]>*/
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+     <div class="container">
+       <div class="row">
+          <div class="col">
+            <h1>google</h1>
+          </div>
+          <div class="col-5">
+            <input type="text" placeholder="search" class="form-control">
+            <button class="btn">search</button>
+          </div>
+          <div class="col ends">
+             <img src="./background.avif" alt="">
+          </div>
+        </div>
+      </div> 
+   </nav>
+
+   <main class="content">
+      <div class="container">
+         <div class="card mt-5">
+            <div class="cart-body">
+                <a href="https://google.com" class="link-item">google chrome</a>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eveniet temporibus quidem nulla suscipit minima fuga amet hic excepturi molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+            </div>
+         </div>
+         <div class="card mt-5">
+            <div class="cart-body">
+                <a href="#" class="link-item">rotter</a>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eveniet temporibus quidem nulla suscipit minima fuga amet hic excepturi molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+            </div>
+         </div>
+         <div class="card mt-5">
+            <div class="cart-body">
+                <a href="https://youtube.com" class="link-item">youtobe.com</a>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eveniet temporibus quidem nulla suscipit minima fuga amet hic excepturi molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+            </div>
+         </div>
+         <div class="card mt-5">
+            <div class="cart-body">
+                <a href="#" class="link-item">W3schoole</a>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eveniet temporibus quidem nulla suscipit minima fuga amet hic excepturi molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+            </div>
+         </div>
+         <div class="card mt-5">
+            <div class="cart-body">
+                <a href="#" class="link-item">Sammar Badriddinov</a>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eveniet temporibus quidem nulla suscipit minima fuga amet hic excepturi molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+            </div>
+         </div>
+         <div class="card mt-5">
+            <div class="cart-body">
+                <a href="#" class="link-item">Azimjon Polvonov</a>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eveniet temporibus quidem nulla suscipit minima fuga amet hic excepturi molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+            </div>
+         </div>
+         <div class="card mt-5">
+            <div class="cart-body">
+                <a href="#" class="link-item">Muhammadyor Nabijonov</a>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eveniet temporibus quidem nulla suscipit minima fuga amet hic excepturi molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquam?</p>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <script>
+      /*<![CDATA[*/
+       const input = document.querySelector('.form-control'),
+          links = document.querySelectorAll('.link-item'),
+          cards = document.querySelectorAll('.card')
+
+       function hide(idx){
+          cards[idx].style.display = 'none'
+       }  
+       
+       function show(idx){
+        cards[idx].style.display = 'block'
+       }
+
+       function allShow(){
+         cards.forEach(item => {
+            item.style.display =  'block'
+         })
+       }
+
+       input.addEventListener('input', () => {
+          links.forEach((item, idx) => {
+            const valueIN = (input.value).toLowerCase()
+            const name = (item.textContent).toLowerCase()
+            console.log(valueIN)
+
+            if(name.match(valueIN)){
+                show(idx)
+            }else{
+                hide(idx)
+            }
+
+            if(input.value == ""){
+                allShow()
+            }
+          })
+       })
+       /*]]>*/
+   </script>
+</body>
+</html>
